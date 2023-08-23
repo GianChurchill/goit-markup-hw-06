@@ -600,6 +600,84 @@ body {
   background-color: var(--green);
 }
 
+/* Subscribe Footer */
+.subscribe-footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  margin-left: 650px;
+  align-items: baseline;
+}
+
+.subscribe-title {
+  position: absolute;
+  margin-top: -110px;
+  color: var(--white);
+}
+
+.email-wrap {
+  position: relative;
+  display: flex;
+}
+
+.email-field {
+  position: absolute;
+  margin-top: -75px;
+}
+
+.email-input {
+  display: block;
+  border: 1px solid var(--lightslate);
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  padding: 10px;
+  background-color: transparent;
+  outline: transparent;
+  color: var(--white);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-input::placeholder {
+  font-size: 12px;
+  color: var(--white);
+}
+
+.subscribe-block {
+  position: relative;
+}
+
+.subscribe-modal {
+  position: absolute;
+  margin: -75px 0 0 280px;
+  background-color: var(--iris);
+  color: var(--white);
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  border: 4px;
+  border-radius: 4px;
+  padding: 8px 64px 8px 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-modal:hover,
+.subscribe-modal:focus {
+  background-color: var(--ocean);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.8),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.subscribe-icon {
+  fill: var(--white);
+  position: absolute;
+  margin-left: 10px;
+}
+
 /* MODAL WINDOW */
 
 .backdrop {
@@ -615,6 +693,8 @@ body {
 }
 
 .modal {
+  padding: 40px;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -625,6 +705,14 @@ body {
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: var(--navyblue);
+  margin: 24px 0 34px 0;
 }
 
 .backdrop.is-hidden .modal {
@@ -668,4 +756,122 @@ body {
   visibility: none;
   opacity: 0;
   pointer-events: none;
+}
+
+/* MODAL FORM */
+
+.form-field {
+  display: block;
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  top: -16px;
+  font-size: 12px;
+  line-height: 0.87px;
+  letter-spacing: 0.01em;
+}
+
+.form-input,
+.form-textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 29px;
+  padding: 11px 16px 11px 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  line-height: 0.87px;
+  letter-spacing: 0.01em;
+
+  color: var(--navyblue);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover,
+.form-input:focus,
+.form-textarea:hover,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--iris);
+}
+
+.form-textarea {
+  padding-left: 16px;
+  height: 120px;
+  resize: none;
+}
+
+.form-textarea::placeholder {
+  color: var(--lightslate);
+  font-size: 12px;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: var(--navyblue);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover + .form-icon,
+.form-input:focus + .form-icon {
+  fill: var(--iris);
+}
+
+.form-agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 34px;
+  margin-left: -12px;
+}
+
+.form-checkbox-icon {
+  fill: none;
+  border: 2px solid var(--navyblue, rgba(46, 47, 66, 0.4));
+  border-radius: 2px;
+  margin-right: 7px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-checkbox:checked + .form-checkbox-icon {
+  background-color: var(--iris);
+  border-color: var(--iris);
+  fill: var(--white);
+}
+
+.form-terms {
+  color: var(--iris);
+}
+
+.button-modal {
+  display: block;
+  margin: 0 auto;
+  margin-top: 24px;
+
+  background-color: var(--iris);
+  color: var(--white);
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  border: 4px;
+  border-radius: 4px;
+  padding: 16px 64px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-modal:hover,
+.button-modal:focus {
+  background-color: var(--ocean);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.8),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
