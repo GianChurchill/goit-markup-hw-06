@@ -624,8 +624,6 @@ body {
 
 .email-form {
   display: inline-flex;
-  width: 453px;
-  height: 80px;
   flex-shrink: 0;
 }
 
