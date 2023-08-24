@@ -545,31 +545,31 @@
               </li>
             </ul>
           </div>
-        </div>
 
-        <!-- Subscribe Form -->
-        <div class="subscribe-footer">
-          <b class="subscribe-title">Subscribe</b>
-          <form name="email-form">
-            <div class="email-wrap">
+          <!-- Subscribe Form -->
+          <div class="subscribe-footer">
+            <b class="subscribe-title">Subscribe</b>
+            <form name="email-form">
               <label class="email-field">
                 <input
                   class="email-input"
                   type="text"
                   name="email-name"
                   placeholder="E-mail"
+                  required
                 />
               </label>
-            </div>
-            <div class="subscribe-block">
-              <button class="subscribe-modal" type="submit">
-                Subscribe
-                <svg class="subscribe-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-subscribe"></use>
-                </svg>
-              </button>
-            </div>
-          </form>
+
+              <div class="subscribe-block">
+                <button class="subscribe-modal" type="submit">
+                  Subscribe
+                  <svg class="subscribe-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-subscribe"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
@@ -596,7 +596,7 @@
           <!-- Name -->
           <label class="form-field">
             <span class="form-label">Name</span>
-            <input class="form-input" type="text" name="user-name" />
+            <input class="form-input" type="text" name="user-name" required />
             <svg class="form-icon" width="18" height="18">
               <use href="./images/icons.svg#icon-name"></use>
             </svg>
@@ -605,7 +605,7 @@
           <!-- Phone -->
           <label class="form-field">
             <span class="form-label">Phone</span>
-            <input class="form-input" type="text" name="user-phone" />
+            <input class="form-input" type="text" name="user-phone" required />
             <svg class="form-icon" width="18" height="18">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
@@ -614,7 +614,7 @@
           <!-- Email -->
           <label class="form-field">
             <span class="form-label">Email</span>
-            <input class="form-input" type="text" name="user-email" />
+            <input class="form-input" type="text" name="user-email" required />
             <svg class="form-icon" width="18" height="18">
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
@@ -628,6 +628,7 @@
               name="user-feedback"
               rows="8"
               placeholder="Text input"
+              required
             ></textarea>
           </label>
 
@@ -637,18 +638,21 @@
               class="form-checkbox is-hidden"
               type="checkbox"
               name="user-terms"
+              required
             />
             <svg class="form-checkbox-icon" width="16" height="16">
               <use href="./images/icons.svg#icon-checkbox"></use>
             </svg>
-            <span
+            <span class="agree-desc"
               >I accept the terms and conditions of the
               <a class="form-terms" href="">Privacy Policy</a></span
             >
           </label>
 
           <!-- Form Button -->
-          <button class="button-modal" type="submit">Send</button>
+          <div class="button-modal-block">
+            <button class="button-modal" type="submit">Send</button>
+          </div>
         </form>
       </div>
     </div>
