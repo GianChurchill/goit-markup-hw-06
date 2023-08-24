@@ -605,16 +605,28 @@ body {
   width: 453px;
   height: 80px;
   flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  display: block;
+  align-items: flex-end;
   margin-left: 80px;
+}
+
+.subscribe-footer form {
+  display: flex;
+  align-items: flex-end;
 }
 
 .subscribe-title {
   color: var(--white);
 }
 
-.email-field {
-  margin-top: 16px;
-  margin-bottom: 32px;
+.email-form {
+  display: inline-flex;
+  width: 453px;
+  height: 80px;
+  flex-shrink: 0;
 }
 
 .email-input {
@@ -638,11 +650,6 @@ body {
   color: var(--white);
 }
 
-.subscribe-block {
-  margin-left: 280px;
-  margin-top: -40px;
-}
-
 .subscribe-modal {
   background-color: var(--iris);
   height: 40px;
@@ -651,6 +658,8 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  margin-left: 16px;
 
   color: var(--white);
   line-height: 1.87;
